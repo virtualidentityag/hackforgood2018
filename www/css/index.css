@@ -141,20 +141,20 @@ input[type="checkbox"] {
   100% { opacity: 1; }
 }
 
-.intro .question {
+.slide.slick-active .fade-in {
   opacity: 0;
   animation: fadesequence .75s forwards;
 }
-.intro .question:nth-child(1) {
+.slide.slick-active .fade-in:nth-child(1) {
   animation-delay: .5s;
 }
-.intro .question:nth-child(2) {
+.slide.slick-active .fade-in:nth-child(2) {
   animation-delay: 3s;
 }
-.intro .question:nth-child(3) {
+.slide.slick-active .fade-in:nth-child(3) {
   animation-delay: 4.5s;
 }
-.intro .question:nth-child(4) {
+.slide.slick-active .fade-in:nth-child(4) {
   animation-delay: 6.5s;
 }
 
