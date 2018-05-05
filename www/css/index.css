@@ -20,8 +20,8 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
-.clearfix :before,
-.clearfix :after {
+.clearfix:before,
+.clearfix:after {
   content: " ";
   display: table;
 }
@@ -59,6 +59,42 @@ footer {
 
 .setup-dialog .slide {
   padding: 40px 40px;
+}
+
+.answer {
+  position: absolute;
+  bottom: 0;
+  width: 200%;
+  height: 50%;
+  background-color: azure;
+  left: -50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  text-align: center;
+}
+
+.answer-content {
+  margin-left: 25%;
+  width: 50%;
+  margin-top: 5%;
+}
+
+.answer-content label {
+  display: inline-block;
+  background-color: aquamarine;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  width: 70%;
+}
+
+input[type="checkbox"]:checked+label {
+  background-color: orange;
+}
+
+input[type="checkbox"] {
+  display: none;
 }
 
 .question {
