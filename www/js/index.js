@@ -18,6 +18,7 @@
  */
 var app = {
 	notificationId: 0,
+	locked: false,
 
     // Application Constructor
     initialize: function() {
@@ -29,40 +30,40 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
-        this.receivedEvent('deviceready');
-		function successCallback(isLocked) {
-			if (isLocked) {
-				console.log('Phone is locked.');
-			} else {
-				console.log('Phone is unlocked.');
-			}
-		}
 
-		setInterval(() => {
+		var check = this.checkLocked.bind(this);
+
+		setInterval(function() {
 			cordova.plugins.lockInfo.isLocked(
-				successCallback,
-				successCallback
+				check,
+				check
 			);
 		}, 2000);
     },
 
-	notify: (message) => {
+	checkLocked: function(isLocked){
+		if (isLocked) {
+			this.locked = true;
+			console.log('locked');
+		} else {
+			if(this.locked) {
+				this.notify('Unlocked');
+				this.locked = false;
+				console.log('unlocked');
+			}
+		}
+	},
+
+	notify: function(message) {
 		cordova.plugins.notification.local.schedule([
 			{ id: this.notificationId, title: message }
 		]);
+		this.notificationId++;
 	},
 
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+	isLocked: function() {
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
+	},
 };
 
 app.initialize();
