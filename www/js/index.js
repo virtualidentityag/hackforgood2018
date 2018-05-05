@@ -17,6 +17,8 @@
  * under the License.
  */
 var app = {
+	notificationId: 0,
+
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
@@ -43,6 +45,12 @@ var app = {
 			);
 		}, 2000);
     },
+
+	notify: (message) => {
+		cordova.plugins.notification.local.schedule([
+			{ id: this.notificationId, title: message }
+		]);
+	},
 
     // Update DOM on a Received Event
     receivedEvent: function(id) {
