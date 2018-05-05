@@ -77,7 +77,7 @@ footer {
 .answer-content {
   margin-left: 25%;
   width: 50%;
-  margin-top: 5%;
+  margin-top: 38px;
 }
 
 .answer-content label {
@@ -90,12 +90,28 @@ footer {
   width: 70%;
 }
 
+.answer-content textarea {
+  width: 75%;
+  padding: 10px;
+  border-radius: 10px;
+  height: 198px;
+  border: none;
+  background-color: rgba(0,0,0,0.2);
+}
+
 input[type="checkbox"]:checked+label {
   background-color: orange;
 }
 
 input[type="checkbox"] {
   display: none;
+}
+
+input[type="text"], input[type="number"] {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(0,0,0,0.2);
 }
 
 .question {

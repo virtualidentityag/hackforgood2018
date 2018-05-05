@@ -28,6 +28,9 @@ var app = {
 			touchThreshold: 100,
 			waitForAnimate: false
 		});
+		$('#add-answer').click(function(){
+			$('.answers').append('<input type="text">')
+		});
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 
