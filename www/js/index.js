@@ -22,7 +22,7 @@ var app = {
 
     // Application Constructor
     initialize: function() {
-		$('main').slick({
+		$('.setup-dialog').slick({
 			arrows: false,
 			infinite: false,
 			mobileFirst: true,
