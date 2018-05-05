@@ -9,3 +9,28 @@
     width: 100%;
     margin: 0 1000px;
 }
+
+.slick-arrow {
+    position: absolute;
+    bottom: 0;
+    width: 33%;
+    height: 50px;
+    border: none;
+    background-color: aquamarine;
+    z-index: 1;
+    font-size: 100%;
+}
+
+.slick-arrow.slick-disabled {
+    display: none !important;
+}
+
+.slick-prev {
+    left: 0;
+    border-top-right-radius: 10px;
+}
+
+.slick-next {
+    right: 0;
+    border-top-left-radius: 10px;
+}

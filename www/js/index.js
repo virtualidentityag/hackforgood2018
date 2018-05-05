@@ -23,7 +23,6 @@ var app = {
     // Application Constructor
     initialize: function() {
 		$('.setup-dialog').slick({
-			arrows: false,
 			infinite: false,
 			mobileFirst: true,
 			touchThreshold: 100,
