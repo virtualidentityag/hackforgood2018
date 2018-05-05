@@ -22,6 +22,13 @@ var app = {
 
     // Application Constructor
     initialize: function() {
+		$('main').slick({
+			arrows: false,
+			infinite: false,
+			mobileFirst: true,
+			touchThreshold: 100,
+			waitForAnimate: false
+		});
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 
