@@ -14,12 +14,14 @@
 .slick-arrow {
     position: absolute;
     bottom: 0;
-    width: 33%;
+    width: 49.9%;
     height: 50px;
-    border: none;
-    background-color: aquamarine;
+    border: none !important;
+    focus: none;
+    background-color: rgba(0,0,0,0.5);
     z-index: 1;
-    font-size: 100%;
+    font-size: 18px;
+    color: #fff;
 }
 
 .slick-arrow.slick-disabled {
@@ -28,10 +30,10 @@
 
 .slick-prev {
     left: 0;
-    border-top-right-radius: 10px;
+    /*border-top-right-radius: 10px;*/
 }
 
 .slick-next {
     right: 0;
-    border-top-left-radius: 10px;
+    /*border-top-left-radius: 10px;*/
 }

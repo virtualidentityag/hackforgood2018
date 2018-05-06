@@ -35,7 +35,7 @@ html {
 }
 
 body {
-  background-color: cornflowerblue;
+  background-color: #1976d2;
   margin: 0;
   height: 100%;
 }
@@ -58,49 +58,8 @@ footer {
   height: 100%;
 }
 
-.setup-dialog .slide {
-  padding: 34px 0;
-}
-
-.answer {
-  position: absolute;
-  bottom: 0;
-  width: 200%;
-  height: 50%;
-  background-color: azure;
-  left: -50%;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  text-align: center;
-}
-
-.answer-content {
-  margin-left: 25%;
-  width: 50%;
-  margin-top: 38px;
-}
-
-.answer-content label {
-  display: inline-block;
-  background-color: aquamarine;
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 8px;
-  cursor: pointer;
-  width: 70%;
-}
-
-.answer-content textarea {
-  width: 75%;
-  padding: 10px;
-  border-radius: 10px;
-  height: 198px;
-  border: none;
-  background-color: rgba(0,0,0,0.2);
-}
-
 input[type="checkbox"]:checked+label {
-  background-color: orange;
+  background-color: #cddc39;
 }
 
 input[type="checkbox"] {
@@ -108,10 +67,15 @@ input[type="checkbox"] {
 }
 
 input[type="text"], input[type="number"] {
-  padding: 10px;
-  border-radius: 10px;
+  padding: 13px 10px;
   border: none;
-  background-color: rgba(0,0,0,0.2);
+  font-size: 18px;
+  margin-top:-10px;
+  margin-bottom:-10px;
+}
+input[type="number"] {
+  width: 2em;
+  text-align: right;
 }
 
 .question {
@@ -126,6 +90,10 @@ input[type="text"], input[type="number"] {
   clear: both;
   line-height: 1.6;
   max-width: 400px;
+}
+
+.question:nth-child(1) {
+  margin-top: 14px;
 }
 
 .question:before {
@@ -148,9 +116,75 @@ input[type="text"], input[type="number"] {
   left: 4px;
   width: 26px;
   height: 40px;
-  background: cornflowerblue;
+  background: #1976d2;
   border-bottom-right-radius: 25px;
   -webkit-transform: translate(-30px, -2px);
+}
+
+.answer {
+  position: absolute;
+  bottom: 50px;
+  padding: 10px 0 0 0;
+  background: rgba(255,255,255,0.5);
+  color: black;
+  float: left;
+  font-size: 18px;
+  clear: both;
+  line-height: 1.6;
+  width: 100%;
+}
+
+.answer label {
+  display: block;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 auto 10px;
+  cursor: pointer;
+  width: 90%;
+}
+
+.answer input.fullsize {
+  border-radius: 10px;
+  display: block;
+  border: none;
+  width: 100%;
+  margin: -10px;
+}
+
+.answer input.fullsize:focus {
+  background: #cddc39;
+}
+
+.answer textarea {
+  width: 75%;
+  padding: 10px;
+  border-radius: 10px;
+  height: 198px;
+  border: none;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.answers input {
+  display: block;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 auto 10px;
+  cursor: pointer;
+  width: 90%;
+}
+
+button#add-answer {
+  border-radius: 25px;
+  border: none;
+  color: white;
+  display: block;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  background: #cddc39;
+  margin: 18px auto;
 }
 
 @keyframes fadesequence {
@@ -158,10 +192,10 @@ input[type="text"], input[type="number"] {
 }
 
 .slide.slick-active .fade-in {
-  opacity: 0;
+  /*opacity: 0;*/
   animation: fadesequence .75s forwards;
 }
-.slide.slick-active .fade-in:nth-child(1) {
+/*.slide.slick-active .fade-in:nth-child(1) {
   animation-delay: .5s;
 }
 .slide.slick-active .fade-in:nth-child(2) {
@@ -172,5 +206,5 @@ input[type="text"], input[type="number"] {
 }
 .slide.slick-active .fade-in:nth-child(4) {
   animation-delay: 6.5s;
-}
+}*/
 
