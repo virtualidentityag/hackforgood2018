@@ -22,7 +22,7 @@
     font-size: 100%;
 }
 
-.slick-arrow.slick-disabled {
+.slick-prev.slick-disabled {
     display: none !important;
 }
 

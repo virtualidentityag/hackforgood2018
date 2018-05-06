@@ -174,3 +174,9 @@ input[type="text"], input[type="number"] {
   animation-delay: 6.5s;
 }
 
+
+.features button{
+  width: 50%;
+  height: 100px;
+  float: left;
+}

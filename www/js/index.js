@@ -31,6 +31,12 @@ var app = {
 		$('#add-answer').click(function(){
 			$('.answers').append('<input type="text">')
 		});
+		$('.slick-next').click(function(){
+			if($(this).hasClass('slick-disabled')) {
+
+				$('.setup-dialog').hide();
+			}
+		});
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 
@@ -39,26 +45,27 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
+		cordova.plugins.backgroundMode.enable();
+		$('#spyStart').click(this.startSpy.bind(this));
+    },
 
+	startSpy: function() {
 		var check = this.checkLocked.bind(this);
-
 		setInterval(function() {
 			cordova.plugins.lockInfo.isLocked(
 				check,
 				check
 			);
 		}, 2000);
-    },
+	},
 
 	checkLocked: function(isLocked){
 		if (isLocked) {
 			this.locked = true;
-			console.log('locked');
 		} else {
 			if(this.locked) {
-				this.notify('Unlocked');
+				this.notify('Really?');
 				this.locked = false;
-				console.log('unlocked');
 			}
 		}
 	},
