@@ -211,7 +211,14 @@ button#add-answer {
 
 
 .features button{
-  width: 50%;
+  width: calc(50% - 5px);
   height: 100px;
   float: left;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.features button:nth-child(odd) {
+  margin-right: 10px;
 }
