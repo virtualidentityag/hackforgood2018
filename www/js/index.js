@@ -33,13 +33,11 @@ var app = {
 		$('#add-answer').click(function(){
 			$('.answers').append('<input type="text">')
 		});
-		$('.slick-next').click(function(){
-			if($(this).hasClass('slick-disabled')) {
 
-				$('.setup-dialog').hide();
-			}
+		$('#further button').click(function(){
+			$('.setup-dialog').hide();
 		});
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+		document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 
     // deviceready Event Handler
@@ -77,6 +75,11 @@ var app = {
 			{ id: this.notificationId, title: message }
 		]);
 		this.notificationId++;
+		navigator.notification.confirm('Did you really want to unlock?', function(index){
+			if(index === 1) {
+				navigator.notification.alert('Mensch Junge!');
+			}
+		}, 'Really?', ['Yes i swear', 'Oops caught']);
 	},
 
 	isLocked: function() {

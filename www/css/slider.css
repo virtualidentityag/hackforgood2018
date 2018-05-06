@@ -24,16 +24,14 @@
     color: #fff;
 }
 
-.slick-prev.slick-disabled {
+.slick-arrow.slick-disabled {
     display: none !important;
 }
 
 .slick-prev {
     left: 0;
-    /*border-top-right-radius: 10px;*/
 }
 
 .slick-next {
     right: 0;
-    /*border-top-left-radius: 10px;*/
 }

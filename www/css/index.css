@@ -134,7 +134,7 @@ input[type="number"] {
   width: 100%;
 }
 
-.answer label {
+.answer label, #further button {
   display: block;
   background-color: #fff;
   padding: 10px;
@@ -142,6 +142,7 @@ input[type="number"] {
   margin: 0 auto 10px;
   cursor: pointer;
   width: 90%;
+  font-size: 18px;
 }
 
 .answer input.fullsize {
