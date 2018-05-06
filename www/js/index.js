@@ -26,7 +26,9 @@ var app = {
 			infinite: false,
 			mobileFirst: true,
 			touchThreshold: 100,
-			waitForAnimate: false
+			waitForAnimate: false,
+      prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">&#x23F4; Previous</button>',
+      nextArrow: '<button class="slick-next" aria-label="Next" type="button">Next &#x23F5;</button>',
 		});
 		$('#add-answer').click(function(){
 			$('.answers').append('<input type="text">')
